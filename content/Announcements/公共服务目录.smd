@@ -12,19 +12,19 @@
 --- 
 
 
-目录
+# 目录
 - [IaaS](#IaaS)
   - [计算设施](#计算设施)
  
 - [SaaS](#SaaS)
   - [开发服务](#开发服务)
   - [计算服务](#计算服务)
-  - [MCSM：MC、steam等游戏服务器](#MCSM：MC、steam等游戏服务器)
+  - [MCSM：MC、steam等游戏服务器](#MCSM)
   - [网盘](#Nextcloud网盘)
 
 # IaaS
 
-## 1. 计算设施
+## 计算设施
     * 访问：https://eoelab.org:1024
     * 注意：
         1. 你必须先联系infra团队成员上传客户端证书
@@ -37,10 +37,10 @@
 
 # SaaS
 
-## 1. 开发服务
-    * github自托管runner,挂靠在eoeair组织下
-        * 使用方法：GitHub Actions
-        * 注意：
+## 开发服务
+* github自托管runner,挂靠在eoeair组织下
+    * 使用方法：GitHub Actions
+    * 注意：
             1. runner分为lxc与vm两种运行时,label为lxc/vm,分别编入LXC_Public，VM_Public的runner组，注意docker-slim等任务必须使用vm（取决于是否需要特权内核）。
             2. 同一group内的runner命名为`lxc-number`，由于github并不支持单runner并发，因此使用单机多runner并发
             3. 默认的runner由lxc提供，由于没有需求，目前没有建立vm
@@ -53,17 +53,15 @@
             3. 我们要求CI/CD或运行时都必须使用本项目来保证安全和可迭代化
             4. gpu开发环境不再被支持,请遵守技术栈相关要求
 
-## 2. 计算服务
-    * Jupyterlab：
-        * 使用方法：自行拉取jupyter项目打包的镜像，可以本地运行，也可以在incus创建
-        * 注意：
+## 计算服务
+* Jupyterlab：
+    * 使用方法：自行拉取jupyter项目打包的镜像，可以本地运行，也可以在incus创建
+    * 注意：
             1. gpu开发环境不再被支持,请遵守技术栈相关要求
 
-## 3. MCSM：MC、steam等游戏服务器
-    * 支持游戏类型:Minecraft（Java/基岩版，全版本支持）,steam
-    * 访问方式： 加入QQ群：945537763
+## MCSM
+* 支持游戏类型:Minecraft（Java/基岩版，全版本支持）,steam
+* 访问方式： 加入QQ群：945537763
 
-## 4. Nextcloud: 网盘
-    * 访问方式： https://eoelab.org:1025 , 使用GitHub登陆即可
-
-
+## Nextcloud网盘
+* 访问方式： https://eoelab.org:1025 , 使用GitHub登陆即可
